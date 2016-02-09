@@ -20,6 +20,7 @@
     "ava"
   ],
   "scripts": {
+    "lint": "eslint src test",
     "watch": "gulp watch",
     "build": "gulp build",
     "deploy": "gulp deploy",
@@ -32,6 +33,7 @@
   },
   "homepage": "https://github.com/Granze/react-starterify",
   "dependencies": {
+    "eslint": "^1.10.3",
     "history": "^1.17.0",
     "react": "^0.14.0",
     "react-dom": "^0.14.0",
@@ -49,7 +51,8 @@
     "browser-sync": "^2.9.1",
     "browserify": "^13.0.0",
     "cssnano": "^3.0.0",
-    "eslint-plugin-react": "^3.3.2",
+    "eslint-config-airbnb": "^5.0.0",
+    "eslint-plugin-react": "^3.16.1",
     "gulp": "^3.9.0",
     "gulp-eslint": "^1.0.0",
     "gulp-gh-pages": "^0.5.4",
