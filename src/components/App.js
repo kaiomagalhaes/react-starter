@@ -13,7 +13,7 @@ class App extends React.Component {
           <Link to="/poweredby">Powered by</Link>
         </header>
         <section>
-          {this.props.children || 'Welcome to React Starterify'}
+          {'Welcome to React Starterify'}
         </section>
       </div>
     );
