@@ -24,7 +24,7 @@
     "watch": "gulp watch",
     "build": "gulp build",
     "deploy": "gulp deploy",
-    "test": "ava --tap | tap-nyan"
+    "test": "eslint src test && ava --tap | tap-nyan"
   },
   "author": "Maurizio Mangione",
   "license": "MIT",
