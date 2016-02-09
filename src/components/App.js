@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import packageJSON from '../../package.json';
 
-class App extends React.component {
+class App extends React.Component {
   render() {
     const version = packageJSON.version;
     return (

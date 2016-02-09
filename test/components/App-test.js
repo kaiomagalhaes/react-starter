@@ -19,9 +19,3 @@ test('should have a version number that match the package.json version property'
 
   t.ok(find(h1, <h1>React Starterify {version}</h1>));
 });
-
-test('should return something', t => {
-  const returnSomething = App.prototype.returnSomething('hello!');
-
-  t.is(returnSomething, 'hello!');
-});
