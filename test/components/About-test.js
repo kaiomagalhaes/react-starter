@@ -16,4 +16,3 @@ test('should have a div as container', t => {
 test('should have an h2 tag containing the text "About"', t => {
   t.ok(find(about.props.children, <h2>About</h2>));
 });
-
