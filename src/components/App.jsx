@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import packageJSON from '../../package.json';
+import Footer from './Footer';
 
 class App extends React.Component {
   render() {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <section>
           {'Welcome to React Starterify'}
         </section>
+        <Footer />
       </div>
     );
   }
