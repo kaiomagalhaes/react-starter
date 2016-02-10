@@ -24,7 +24,7 @@
     "watch": "gulp watch",
     "build": "gulp build",
     "deploy": "gulp deploy",
-    "test": "eslint src test && ava --tap | tap-nyan"
+    "test": "eslint src test && jest"
   },
   "author": "Maurizio Mangione",
   "license": "MIT",
@@ -45,6 +45,7 @@
     "babel": "^6.3.13",
     "babel-core": "^6.3.17",
     "babel-eslint": "^5.0.0-beta6",
+    "babel-jest": "^6.0.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
     "babelify": "^7.2.0",
@@ -75,5 +76,23 @@
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^3.4.0"
+  },
+ "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/node_modules/react-dom",
+      "<rootDir>/node_modules/react-addons-test-utils",
+      "<rootDir>/node_modules/fbjs"
+    ],
+    "testFileExtensions": [
+      "js"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "json",
+      "es6"
+    ]
   }
 }
