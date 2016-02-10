@@ -11,7 +11,7 @@ import rimraf from 'rimraf';
 import notify from 'gulp-notify';
 import browserSync, { reload } from 'browser-sync';
 import sourcemaps from 'gulp-sourcemaps';
-import postcss from 'gulp-postcss';
+import sass from 'gulp-sass';
 import rename from 'gulp-rename';
 import nested from 'postcss-nested';
 import vars from 'postcss-simple-vars';
@@ -26,7 +26,7 @@ import ghPages from 'gulp-gh-pages';
 const paths = {
   bundle: 'app.js',
   srcJsx: 'src/Index.js',
-  srcCss: 'src/**/*.scss',
+  srcCss: 'src/**/*.sass',
   srcImg: 'src/images/**',
   srcLint: ['src/**/*.js', 'test/**/*.js'],
   dist: 'dist',
@@ -89,7 +89,7 @@ gulp.task('styles', () => {
   gulp.src(paths.srcCss)
   .pipe(rename({extname: ".css"}))
   .pipe(sourcemaps.init())
-  .pipe(postcss([vars, extend, nested, autoprefixer, cssnano]))
+  .pipe(sass().on('error', sass.logError))
   .pipe(sourcemaps.write('.'))
   .pipe(gulp.dest(paths.dist))
   .pipe(reload({stream: true}));
