@@ -22,11 +22,11 @@ import imagemin from 'gulp-imagemin';
 import pngquant from 'imagemin-pngquant';
 import runSequence from 'run-sequence';
 import ghPages from 'gulp-gh-pages';
-
+import sassLint from 'gulp-sass-lint';
 const paths = {
   bundle: 'app.js',
   srcJsx: 'src/Index.js',
-  srcCss: 'src/**/*.sass',
+  srcCss: 'src/**/*.scss',
   srcImg: 'src/images/**',
   srcLint: ['src/**/*.js', 'test/**/*.js'],
   dist: 'dist',
@@ -109,6 +109,13 @@ gulp.task('images', () => {
       use: [pngquant()]
     }))
     .pipe(gulp.dest(paths.distImg));
+});
+
+gulp.task('cssLint', function () {
+    gulp.src(paths.srcCss)
+    .pipe(sassLint())
+    .pipe(sassLint.format())
+    .pipe(sassLint.failOnError())
 });
 
 gulp.task('lint', () => {
