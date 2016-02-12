@@ -2,7 +2,7 @@
 #MAINTAINER Kaio Magalhaes.
 
 ####### Project configuration example #######
-PROJECT_NAME=portifolio
+PROJECT_NAME=react-starter
 PROJECT_MAIN_LANGUAGE=javascript
 #############################################
 
